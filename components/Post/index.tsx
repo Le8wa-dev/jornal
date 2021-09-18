@@ -3,6 +3,7 @@ import { Paper, Typography } from '@material-ui/core';
 import Image from 'next/image';
 
 import styles from './Post.module.scss';
+import { PostActions } from '../PostActions';
 
 export const Post: React.FC = () => {
   return (
@@ -20,8 +21,9 @@ export const Post: React.FC = () => {
       <Image
         src="https://leonardo.osnova.io/a21ca5a9-d95b-560d-9a6f-9fa87eff7fcd/-/preview/600/-/format/webp/"
         height={500}
-        width={600}
+        width={640}
       />
+      <PostActions />
     </Paper>
   );
 };
