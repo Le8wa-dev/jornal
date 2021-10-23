@@ -1,0 +1,98 @@
+
+.wrapper {
+    max-width: 500px;
+}
+
+.form {
+    display: block;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    &.double {
+        justify-content: space-between;
+    }
+    &.double > * {
+        width: 48%;
+    }
+    & + & {
+        margin-top: 20px;
+    }
+}
+.box {
+    width: 100%;
+    position: relative;
+    height: 70px;
+    padding-bottom: 20px;
+}
+
+.input {
+    padding: 0 15px;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    &:focus ~ .label,
+    &:not(:placeholder-shown) ~ .label,
+    &.error ~ .label {
+        font-size: 10px;
+        top: 5px;
+    }
+
+    &.error {
+        border-color: red;
+    }
+    &.error ~ .label {
+        color: red;
+    }
+}
+input.error ~ .label {
+    font-size: 10px;
+    top: 5px;
+}
+
+input.error {
+    border-color: red;
+    color: red;
+}
+input.error ~ .label {
+    color: red;
+}
+.label {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 20px;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    transition: .3s;
+}
+label.error {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size: 10px;
+    line-height: 120%;
+    color: red;
+}
+
+.button {
+    width: 220px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52, 190, 236);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+}

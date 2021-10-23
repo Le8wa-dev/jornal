@@ -22,8 +22,6 @@ export const LeftMenu: React.FC = () => {
 
   const router = useRouter();
 
-  console.log(router)
-
   return (
     <div className={styles.menu}>
       <ul>
