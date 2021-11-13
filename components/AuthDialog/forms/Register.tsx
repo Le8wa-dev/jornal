@@ -26,7 +26,16 @@ export const RegisterForm: React.FC<LoginFormProps> = ({ onOpenRegister, onOpenL
 
   const onSubmit = async (dto: CreateUserDto) => {
     try {
-      const data = await UserApi.register(dto);
+      // const data = await UserApi.register(dto);
+      const data:any = {
+        email: "savio123@mail.ru",
+        fullName: "Andrew",
+        password: "123123",
+        id: 1,
+        token: "andrew123456",
+        created_at: "2021-10-07T19:13:29.029Z",
+        updated_at: "2021-10-07T19:13:29.029Z",
+      }
       setCookie(null, 'authToken', data.token, {
         maxAge: 30 * 24 * 60 * 60,
         path: '/',

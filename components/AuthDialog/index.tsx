@@ -19,9 +19,9 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({ onClose, visible }) => {
   return (
     <Dialog open={visible} onClose={onClose} maxWidth="xs" fullWidth>
       <DialogContent>
-        <DialogContentText>
+        <DialogContentText component={'div'}>
           <div className={styles.content}>
-            <Typography className={styles.title}>
+            <Typography className={styles.title} component={'div'}>
               {formType === 'main' ? (
                 'Вход в TJ'
               ) : (
